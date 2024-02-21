@@ -1,0 +1,45 @@
+.header{
+    background-color: blue;
+    color: white;
+    padding: 20px;
+    margin : 0 auto;
+}
+h1{
+    text-align: center;
+}
+.hover{
+    width:50%;
+    margin : 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.links{
+    color:white;
+
+    padding: 20px;
+    width: 200px;
+    display: inline-block;
+    text-align: center;
+}
+
+.links:hover{
+    background-color: gray;   
+}
+
+.blocks{
+    background-color: gainsboro;
+    margin: 20px;
+    padding: 50px;
+}
+button{
+    background-color: black;
+    color: white;
+    width: 100px;
+    height: 50px;
+}
+
+input{
+    width: 250px;
+    height: 25px;
+}

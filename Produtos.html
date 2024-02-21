@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href = "ProdutoStyle.css">
+
+</head>
+<body>
+    <header>
+        <div class = "header">
+            <h1> Loja de produtos</h1>
+            <div class = "hover">
+                <a class = "links">Home</a>
+                <a class = "links">Produtos</a>
+                <a class = "links">Carrinho</a>
+            </div>
+
+        </div>
+    </header>
+
+    <section>
+       <center><h2>Produtos em destaque</h2></center> 
+       
+       <center><p>Confira nossa seleção especial de produtos</p></center> 
+    </section>
+
+    <center>
+        <div class = "blocks">
+            <img src = "Pennywhise.jpg" alt = "livro" width="200" height="250">
+            <br>
+            <strong>
+                <h7>It: a coisa</h7>
+                <br>
+                <h8>R$8,00</h8>
+            </strong>
+            <br>
+            <button onclick="(armazenar(8))">Comprar</button>
+        </div>
+
+        <br>
+        
+        <div class = "blocks">
+            <img src = "Roupao.jpg" alt = "Roupao" width="200" height="250">
+            <br>
+            <strong>
+                <h7>Roupão</h7>
+                <br>
+                <h8>R$12,00</h8>
+            </strong>
+            <br>
+            <button onclick="(armazenar(12))">Comprar</button>
+        </div>
+
+        <br>
+
+        <div class = "blocks">
+            <img src = "tv.png" alt = "TV" width="400" height="200">
+            <br>
+            <strong>
+                <h7>tv</h7>
+                <br>
+                <h8>R$5,00</h8>
+            </strong>
+            <br>
+            <button onclick="(armazenar(5))">Comprar</button>
+        </div>
+    </center>
+
+    <div id = "Carrinho"></div>
+    <button onclick="esvaziar()">Esvaziar</button>
+    <br>
+    <br>
+    <br>
+    <input id = "email" type="text" placeholder="Digite seu email...">
+    <br>
+    <input id = "senha" type="text" placeholder="Digite sua senha...">
+    <br>
+    <br>
+    <button onclick="Encomendar()">Encomendar</button>
+
+    <script>
+        var valorArmazenado = 0;
+        function armazenar(valor){
+
+            valorArmazenado += valor;
+            document.getElementById("Carrinho").innerText = "Total: R$ "+valorArmazenado;
+        }
+
+        function esvaziar(){
+            if(valorArmazenado != 0){
+            valorArmazenado = 0;
+            document.getElementById("Carrinho").innerText = "Total: R$ 0";
+            }
+        }
+
+        function Encomendar(){
+            window.location.href = "Finalizar.html";
+        }
+
+    </script>
+</body>
+</html>
